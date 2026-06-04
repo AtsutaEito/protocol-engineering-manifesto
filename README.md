@@ -8,7 +8,6 @@
 ## 1. 思想トポロジー / Philosophical Topology
 
 ### ①「知性の結晶化」最上位主張トポロジー / High-Level Assertion Topology (Why)
-※GitHub上でグラフィカルに自動描写されます。
 
 ```mermaid
 graph TB
