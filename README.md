@@ -56,30 +56,6 @@ graph TB
 
 ---
 
-### ②マスター✕Gem 共創ワークフロー / Master-Gem Co-Creation Workflow
-
-```mermaid
-flowchart TD
-    classDef master fill:#e1f5fe,stroke:#01579b,stroke-width:2px;
-    classDef gem fill:#ede7f6,stroke:#4a148c,stroke-width:2px;
-    classDef external fill:#fff9c4,stroke:#fbc02d,stroke-width:1px;
-
-    A[1. Qiitaに日本語記事を執筆・公開]:::master -->|QiitaのURLを提示| B[2. GemにURLを読み込ませる]:::master
-    B --> C[3. 構造化セマンティクスを解析]:::gem
-    C --> D[4. 日英併記のタイトル・見出しMarkdownを自動生成]:::gem
-    D -->|生成された原稿| E[5. 別の検証用AIでファクトチェックを実行]:::master
-    E -->|差分の調整とブラッシュアップ| F[6. 最終意思決定と承認]:::master
-    F --> G[7. 新リポジトリ: manifesto にそのままデプロイ]:::master
-    F --> H[8. Medium にそのままデプロイ]:::master
-    H -->|カノニカル設定でQiitaを優先URLに登録| A
-
-    %% スタイルの適用
-    class A,B,E,F,G,H master;
-    class C,D gem;
-```
-
----
-
 ## 2. マニフェスト記事一覧 / Manifesto Articles Index
 
 * **[01. AIエンジニアリング : 1.0から4.1に至る進化の系譜と知的主権の奪還 / The Genealogy of AI Engineering: From 1.0 to 4.1 (Protocol Engineering) and the Reclamation of Intellectual Sovereignty](./01_AIE-Genealogy-and-Sovereignty.md)**
