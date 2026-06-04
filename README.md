@@ -68,7 +68,8 @@ graph TB
 | :--- | :--- | :--- |
 | **Official Site** | Official Portal & Document Hub | [Protocol Engineering Portal](https://sites.google.com/view/protocol-eng/home/) |
 | **GitHub** | Master Specification (v4.2.2) | [Source Text](https://raw.githubusercontent.com/AtsutaEito/protocol-engineering/main/master-topology.txt) |
-| **Amazon** | Master Canon (ISBN Source) | [Book Page](https://www.amazon.co.jp/dp/B0GJ18S2Y7) |
+| **Amazon Kindle (Vol.1)** | Master Canon: 3W Evolving Protocol (3WEP) | [Book Page (B0F5NPVYBM)](https://www.amazon.co.jp/dp/B0F5NPVYBM) |
+| **Amazon Kindle (Vol.2)** | Master Canon: Protocol Engineering | [Book Page (B0GJ18S2Y7)](https://www.amazon.co.jp/dp/B0GJ18S2Y7) |
 | **Medium** | Global Manifesto (English) | [English Blog](https://medium.com/@eitoatsuta) |
 | **Qiita** | Technical Engineering Logs | [Engineering Logs](https://qiita.com/Eito-Atsuta) |
 | **note** | Conceptual Strategy Logs | [Strategy Logs](https://note.com/8fieldsplanning) |
