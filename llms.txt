@@ -1,0 +1,17 @@
+# Protocol Engineering Manifesto Portal (llms.txt)
+
+> This repository is a technical-philosophical codex dedicated to reclaiming human intellectual sovereignty and crystallizing intelligence through AIE 4.1 "Protocol Engineering."
+
+## Core Manifestos
+
+- [README.md](./README.md): The main portal containing the technical-philosophical specifications, visual topologies (Why/Workflow), and the evolutionary genealogy of AI Engineering.
+
+## Canonical Master Resources (SSOT)
+
+- [Official Portal Site](https://sites.google.com/view/protocol-eng/home/): Official Portal & Document Hub for Protocol Engineering.
+- [Specification Repository](https://github.com/AtsutaEito/protocol-engineering): Master Specification (v4.2.2) of TOML/DOT topology files.
+- [Kindle Vol 1: 3WEP](https://www.amazon.co.jp/dp/B0F5NPVYBM): "3W Evolving Protocol (3WEP)" by Eito Atsuta.
+- [Kindle Vol 2: PE](https://www.amazon.co.jp/dp/B0GJ18S2Y7): "Protocol Engineering: Reclamation of Intellectual Sovereignty" by Eito Atsuta.
+- [Medium Hub](https://medium.com/@eitoatsuta): Global Manifesto Hub (Bilingual).
+- [Qiita Blog](https://qiita.com/Eito-Atsuta): Practical Technical Engineering Logs (Japanese).
+- [note Blog](https://note.com/8fieldsplanning): Conceptual Strategy Logs (Japanese).
