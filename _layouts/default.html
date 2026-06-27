@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'ja' }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+  <meta name="description" content="{{ page.description }}">
+  <style>
+    /* ----------------------------------------------------
+       1. 全体レイアウト & デザインシステム
+       ---------------------------------------------------- */
+    :root {
+      --primary-color: #0f172a;
+      --text-color: #27272a;
+      --bg-color: #fcfcfc;
+      --card-border: #e4e4e7;
+      --card-bg: #ffffff;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.05);
+      --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    .pe-container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    header.page-header {
+      display: none !important; /* GitHubのデフォルトテーマヘッダーを非表示化 */
+    }
+
+    /* ----------------------------------------------------
+       2. カスタムヘッダー
+       ---------------------------------------------------- */
+    .pe-header {
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 24px;
+      margin-bottom: 16px;
+    }
+
+    .pe-title {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--primary-color);
+      margin: 0 0 16px 0;
+    }
+
+    /* ----------------------------------------------------
+       3. ヘッダーバナー
+       ---------------------------------------------------- */
+    .pe-header-banner {
+      width: 100%;
+      margin-bottom: 32px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .pe-header-banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ----------------------------------------------------
+       4. 動的カード & グリッド
+       ---------------------------------------------------- */
+    .pe-section-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      border-bottom: 2px solid var(--primary-color);
+      padding-bottom: 8px;
+      margin-bottom: 24px;
+    }
+
+    .pe-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .pe-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 20px;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .pe-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      border-color: #cbd5e1;
+    }
+
+    .pe-card h3 {
+      margin: 0 0 10px 0;
+      font-size: 1.15rem;
+      color: var(--primary-color);
+      font-weight: 600;
+    }
+
+    .pe-card p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #52525b;
+      flex-grow: 1;
+    }
+
+    .pe-card .pe-tag {
+      display: inline-block;
+      align-self: flex-start;
+      background-color: #f1f5f9;
+      color: #475569;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 4px 8px;
+      border-radius: 4px;
+      margin-top: 12px;
+    }
+
+    /* ----------------------------------------------------
+       5. マークダウン本文 (GFM) の自動美化スタイル
+       ---------------------------------------------------- */
+    .markdown-body {
+      word-wrap: break-word;
+      font-size: 16px;
+      color: #24292f;
+    }
+
+    .markdown-body h1 { font-size: 2em; border-bottom: 1px solid #d8dee4; padding-bottom: .3em; margin-top: 32px; margin-bottom: 16px; font-weight: 700; color: var(--primary-color); }
+    .markdown-body h2 { font-size: 1.5em; border-bottom: 1px solid #d8dee4; padding-bottom: .3em; margin-top: 32px; margin-bottom: 16px; font-weight: 700; color: var(--primary-color); }
+    .markdown-body h3 { font-size: 1.25em; margin-top: 24px; margin-bottom: 16px; font-weight: 600; color: var(--primary-color); }
+    .markdown-body p { margin-top: 0; margin-bottom: 16px; }
+    .markdown-body blockquote { padding: 0 1em; color: #57606a; border-left: .25em solid #10b981; margin: 0 0 16px 0; background-color: #f8fafc; padding: 12px 16px; border-radius: 0 6px 6px 0; }
+    .markdown-body ul, .markdown-body ol { padding-left: 2em; margin-top: 0; margin-bottom: 16px; }
+    .markdown-body table { border-spacing: 0; border-collapse: collapse; margin-top: 0; margin-bottom: 16px; width: 100%; display: block; overflow-x: auto; }
+    .markdown-body table th, .markdown-body table td { padding: 8px 13px; border: 1px solid #d0d7de; }
+    .markdown-body table tr:nth-child(even) { background-color: #f6f8fa; }
+    .markdown-body code { padding: .2em .4em; margin: 0; font-size: 85%; white-space: break-spaces; background-color: rgba(175,184,193,0.2); border-radius: 6px; font-family: monospace; }
+
+    /* ----------------------------------------------------
+       6. ポリシー & フッター
+       ---------------------------------------------------- */
+    .pe-policy {
+      margin-top: 64px;
+      border-top: 1px solid var(--card-border);
+      padding-top: 32px;
+      color: #475569;
+    }
+
+    .pe-policy h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      margin: 0 0 16px 0;
+    }
+
+    .pe-policy p {
+      font-size: 0.9rem;
+      margin: 0 0 12px 0;
+    }
+
+    .pe-footer {
+      margin-top: 48px;
+      border-top: 1px solid var(--card-border);
+      padding-top: 24px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+
+<div class="pe-container">
+
+<header class="pe-header">
+<div style="font-size: 0.95rem; font-weight: 700; color: #10b981; letter-spacing: 0.05em; margin-bottom: 6px; text-transform: uppercase;">プロトコルエンジニアリング・マニフェスト</div>
+<h1 class="pe-title" style="margin-top: 0; margin-bottom: 16px;">Protocol Engineering Manifesto</h1>
+</header>
+
+<!-- 自動リンク切れ防止タグを使用した、共通の動的ヘッダーバナー -->
+<div class="pe-header-banner">
+<img src="{{ '/images/pe-header.png' | relative_url }}" alt="Protocol Engineering Header Banner">
+</div>
+
+<!-- マークダウン本文（content）の差し込みスロット -->
+<main class="markdown-body">
+{{ content }}
+</main>
+
+<!-- 共通ポリシーと厳選4ラインのSSOT＆エビデンスリンク -->
+<section class="pe-policy">
+<h2>⚖️ Intellectual Sovereignty & Citation Policy</h2>
+<p><strong>本サイトおよび本リポジトリ内の知性資産に関する権利および引用規定</strong></p>
+<p>本サイトおよび本リポジトリに含まれる全ての仕様書、トポロジー定義、および論理構造（Formation）は、田 栄人の独占的著作物であり、著作権法の下に保護されています。</p>
+
+<h3 style="font-size: 1.1rem; margin-top: 24px; margin-bottom: 12px; color: var(--primary-color);">■ 知性の原本と実証（SSOT & Evidence）</h3>
+<ul style="font-size: 0.85rem; padding-left: 20px; line-height: 1.8;">
+<li><strong>[Amazon] Protocol Engineering</strong> : <a href="https://www.amazon.co.jp/dp/B0GJ18S2Y7" target="_blank">https://www.amazon.co.jp/dp/B0GJ18S2Y7</a></li>
+<li><strong>[Amazon] 3W Evolving Protocol</strong> : <a href="https://www.amazon.co.jp/dp/B0F5NPVYBM" target="_blank">https://www.amazon.co.jp/dp/B0F5NPVYBM</a></li>
+<li><strong>Protocol Engineering Portal</strong> : <a href="https://atsutaeito.github.io/protocol-engineering/" target="_blank">https://atsutaeito.github.io/protocol-engineering/</a></li>
+<li><strong>プロトコルエンジニアリング公式</strong> : <a href="https://sites.google.com/view/protocol-eng/" target="_blank">https://sites.google.com/view/protocol-eng/</a></li>
+</ul>
+</section>
+
+<!-- 共通コピーライトフッター -->
+<footer class="pe-footer">
+<p>Copyright © 2026 Eito Atsuta. All Rights Reserved.</p>
+</footer>
+
+</div>
+
+</body>
+</html>
