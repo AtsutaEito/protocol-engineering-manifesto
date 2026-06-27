@@ -36,7 +36,7 @@
     }
 
     header.page-header {
-      display: none !important; /* GitHubのデフォルトテーマヘッダーを非表示化 */
+      display: none !important; /* デフォルトヘッダー非表示 */
     }
 
     /* ----------------------------------------------------
@@ -56,7 +56,7 @@
     }
 
     /* ----------------------------------------------------
-       3. ヘッダーバナー
+       3. 動的ヘッダーバナー
        ---------------------------------------------------- */
     .pe-header-banner {
       width: 100%;
@@ -73,7 +73,7 @@
     }
 
     /* ----------------------------------------------------
-       4. 動的カード & グリッド
+       4. 動的グリッド & アイキャッチ対応カードデザイン
        ---------------------------------------------------- */
     .pe-section-title {
       font-size: 1.5rem;
@@ -94,14 +94,13 @@
       background: var(--card-bg);
       border: 1px solid var(--card-border);
       border-radius: 8px;
-      padding: 20px;
+      overflow: hidden; /* 角を綺麗に切り取る */
       text-decoration: none;
       color: inherit;
       box-shadow: var(--shadow-sm);
       transition: var(--transition);
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
     }
 
     .pe-card:hover {
@@ -110,16 +109,42 @@
       border-color: #cbd5e1;
     }
 
+    /* カードのサムネイル画像エリア */
+    .pe-card-image {
+      width: 100%;
+      height: 160px;
+      overflow: hidden;
+      background-color: #f1f5f9;
+      position: relative;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .pe-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* 縦横比を保ってきれいに切り抜く */
+    }
+
+    /* カード内のテキストエリア */
+    .pe-card-content {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
+    }
+
     .pe-card h3 {
       margin: 0 0 10px 0;
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       color: var(--primary-color);
       font-weight: 600;
+      line-height: 1.4;
     }
 
     .pe-card p {
       margin: 0;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       color: #52525b;
       flex-grow: 1;
     }
@@ -137,7 +162,7 @@
     }
 
     /* ----------------------------------------------------
-       5. マークダウン本文 (GFM) の自動美化スタイル
+       5. マークダウン本文 (GFM) スタイル
        ---------------------------------------------------- */
     .markdown-body {
       word-wrap: break-word;
@@ -197,17 +222,21 @@
 <h1 class="pe-title" style="margin-top: 0; margin-bottom: 16px;">Protocol Engineering Manifesto</h1>
 </header>
 
-<!-- 自動リンク切れ防止タグを使用した、共通の動的ヘッダーバナー -->
+<!-- ★【ここが動的条件分岐】ページに画像が指定されていればその画像を表示し、なければデフォルトのヘッダーを表示する -->
 <div class="pe-header-banner">
-<img src="{{ '/images/pe-header.png' | relative_url }}" alt="Protocol Engineering Header Banner" onerror="this.parentElement.style.display='none';">
+  {% if page.image %}
+    <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" onerror="this.parentElement.style.display='none';">
+  {% else %}
+    <img src="{{ '/images/pe-header.png' | relative_url }}" alt="Protocol Engineering Header Banner" onerror="this.parentElement.style.display='none';">
+  {% endif %}
 </div>
 
-<!-- マークダウン本文（content）の差し込みスロット -->
+<!-- 本文の差し込みスロット -->
 <main class="markdown-body">
 {{ content }}
 </main>
 
-<!-- 共通ポリシーと厳選4ラインのSSOT＆エビデンスリンク -->
+<!-- 共通ポリシー -->
 <section class="pe-policy">
 <h2>⚖️ Intellectual Sovereignty & Citation Policy</h2>
 <p><strong>本サイトおよび本リポジトリ内の知性資産に関する権利および引用規定</strong></p>
@@ -222,7 +251,7 @@
 </ul>
 </section>
 
-<!-- 共通コピーライトフッター -->
+<!-- フッター -->
 <footer class="pe-footer">
 <p>Copyright © 2026 Eito Atsuta. All Rights Reserved.</p>
 </footer>
