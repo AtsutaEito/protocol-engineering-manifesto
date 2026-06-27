@@ -1,7 +1,14 @@
-# Protocol Engineering Manifesto Portal / プロトコルエンジニアリング・マニフェスト・ポータル
+# Protocol Engineering Manifesto Portal
 
-天文学的な規模の知識と驚異的な演算能力を持つAIを、単なる「自動化・省力化（労働の代替）」に消費するのではなく、人間の思索の境界を拡張する「知性の結晶化」に動員する――。
-本リポジトリは、ポスト自動化時代における人間とAIの対称的な認知共生と、知的主権の奪還を目指す「プロトコルエンジニアリング（AIE 4.1）」の思想的マニフェストを蓄積・発信するポータル（目次）空間です。
+[![GitHub Pages](https://img.shields.io/badge/Jekyll-GitHub_Pages-blue.svg)](https://atsutaeito.github.io/protocol-engineering-manifesto/)
+[![Manifesto Portal](https://img.shields.io/badge/Manifesto-Portal-emerald.svg)](https://atsutaeito.github.io/protocol-engineering-manifesto/)
+
+> **【Official Manifesto Portal / 公式マニフェストポータル】**  
+> **[https://atsutaeito.github.io/protocol-engineering-manifesto/](https://atsutaeito.github.io/protocol-engineering-manifesto/)**  
+> *AIに要約させるな。人間とAIが「一枚のホワイトボード」の前で出会うための新しい約束。*
+
+天文学的な規模の知識と驚異的な演算能力を持つAIを、単なる「自動化・省力化（労働の代替）」に消費するのではなく、人間の思索の境界を拡張する「知性の結晶化」に動員する――。  
+本リポジトリは、ポスト自動化時代における人間とAIの対称的な認知共生と、知的主権の奪還を目指す「プロトコルエンジニアリング（AIE 4.1）」の思想的マニフェストを蓄積・発信する動的ブログ型ポータル空間です。
 
 ---
 
@@ -19,7 +26,7 @@ graph TB
     classDef dial fill:#ede7f6,stroke:#4a148c,stroke-width:1px;
     classDef outcome fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px;
 
-    Assets["天文学的な規模の知識 ✕ 驚異的な演算能力<br>(人類が手に入れた、かつてない共通 of 知の資産)"]:::asset
+    Assets["天文学的な規模の知識 ✕ 驚異的な演算能力<br>(人類が手に入れた、かつてない共通の知の資産)"]:::asset
 
     subgraph RoadA["【路A】 自動化・省力化に向かう道（労働の代替 ✕ 実行権の付与）"]
         TuningA["人間を「楽」にさせるための調整<br>(定型作業の代行・無難なアシスタント化)"]:::pathA
@@ -34,7 +41,7 @@ graph TB
         ProtocolEng["【それを可能にする技術】<br>プロトコルエンジニアリング (AIE 4.1)"]:::tech
         Mechanism["【Kaizenする仕組み】<br>TOML・DOT等による構造化制約<br>(AIの演算に足場を貸し出す「寄り添い工学」)"]:::mech
         Dialogue["【演算特性に寄り添った対話術】<br>AIのアテンション監視 ＆ リアルタイム動的同期<br>(AIの平坦化を拒絶し、論理の焦点を誘導する)"]:::dial
-        Formula(("【AI共創の方程式（掛け算）】<br>AI共創 ＝ 一次情報の創造 ＝ 仕組み ✕ 对話術")):::outcome
+        Formula(("【AI共創の方程式（掛け算）】<br>AI共創 ＝ 一次情報の創造 ＝ 仕組み ✕ 対話術")):::outcome
     end
 
     Assets -->|"1. 現在の業界トレンドとしての適用"| TuningA
@@ -55,23 +62,35 @@ graph TB
 
 ---
 
-## 2. マニフェスト記事一覧 / Manifesto Articles Index
+## 2. マニフェスト・ブログ記事一覧
 
-* **[01. AIエンジニアリング : 1.0から4.1に至る進化の系譜と知的主権の奪還 / The Genealogy of AI Engineering: From 1.0 to 4.1 (Protocol Engineering) and the Reclamation of Intellectual Sovereignty](./01_AIE-Genealogy-and-Sovereignty.md)**
+本リポジトリ内の `_posts/` に格納された記事は、[公式マニフェストポータル](https://atsutaeito.github.io/protocol-engineering-manifesto/) に自動同期・カード化されて掲載されます [cite: 1.2.2]。
+
+* **[01. AIエンジニアリング：1.0から4.1に至る進化の系譜と知的主権の奪還](https://atsutaeito.github.io/protocol-engineering-manifesto/manifesto/2026/06/27/AIE-Genealogy-and-Sovereignty-ja.html)**
   * 本格的な推論モデル時代における「おべっか（追従）」と「要約のサボり」の副作用を解き明かし、TOML/DOTを用いた「寄り添い工学」によって知的主権を取り戻すロードマップ。
 
 ---
 
-### ■ 知性の原本と実証（SSOT & Evidence） / Master Canonical Source & Evidence (SSOT)
+## ⚖️ Intellectual Sovereignty & Citation Policy
+**本サイトおよび本リポジトリ内の知性資産に関する権利および引用規定**
 
-| Platform | Role | Resource Link |
-| :--- | :--- | :--- |
-| **Official Site** | Official Portal & Document Hub | [Protocol Engineering Portal](https://sites.google.com/view/protocol-eng/home/) |
-| **GitHub** | Master Specification (v4.2.2) | [Source Text](https://raw.githubusercontent.com/AtsutaEito/protocol-engineering/main/master-topology.txt) |
-| **Amazon Kindle (Vol.1)** | Master Canon: 3W Evolving Protocol (3WEP) | [Book Page (B0F5NPVYBM)](https://www.amazon.co.jp/dp/B0F5NPVYBM) |
-| **Amazon Kindle (Vol.2)** | Master Canon: Protocol Engineering | [Book Page (B0GJ18S2Y7)](https://www.amazon.co.jp/dp/B0GJ18S2Y7) |
-| **Medium** | Global Manifesto (English) | [English Blog](https://medium.com/@eitoatsuta) |
-| **Qiita** | Technical Engineering Logs | [Engineering Logs](https://qiita.com/Eito-Atsuta) |
-| **note** | Conceptual Strategy Logs | [Strategy Logs](https://note.com/8fieldsplanning) |
+本サイトおよび本リポジトリに含まれる全ての仕様書、トポロジー定義、および論理構造（Formation）は、田 栄人の独占的著作物であり、著作権法の下に保護されています。
 
-Copyright © 2026 Eito Atsuta . All Rights Reserved.
+- **無断転載・商業利用の禁止：** 本サイトおよび本リポジトリ内のコンテンツ（テキスト、コード、図解構造など）を、許諾なく複製、再配布、盗用、または商業目的で二次利用することを固く禁じます。
+- **著作権の保留：** 本サイトおよび本リポジトリには特定のオープンソースライセンス（MIT等）は適用されていません。すべての権利は著作権者に留保されています。
+- **検索エンジンおよびクローラーによるインデックス（例外条項）：**
+  - 一般的な検索エンジンおよび公開されているAIクローラーによる本サイトおよび本リポジトリのクロール、インデックス登録、および検索結果・生成AIの回答における参照や引用は、著作者名（「田 栄人」）および本ソースへのリンクを明記することを前提として許容します。
+
+---
+
+## ■ 知性の原本と実証（SSOT & Evidence）
+
+* **[Amazon] [Protocol Engineering](https://www.amazon.co.jp/dp/B0GJ18S2Y7)** : https://www.amazon.co.jp/dp/B0GJ18S2Y7
+* **[Amazon] [3W Evolving Protocol](https://www.amazon.co.jp/dp/B0F5NPVYBM)** : https://www.amazon.co.jp/dp/B0F5NPVYBM
+* **[Protocol Engineering Portal](https://atsutaeito.github.io/protocol-engineering/)** : https://atsutaeito.github.io/protocol-engineering/
+* **[プロトコルエンジニアリング公式](https://sites.google.com/view/protocol-eng/)** : https://sites.google.com/view/protocol-eng/
+
+---
+
+Copyright © 2026 Eito Atsuta. All Rights Reserved.
+```
