@@ -3,14 +3,14 @@ layout: post
 title: "AI本能制御 - 静的制御プロトコル：TOML仕様による行動規範の構造的ロック【第2回】"
 date: 2026-08-30 08:00:00 +0900
 categories: [case-study, protocol-engineering]
-image: /assets/images/20260830-header.jpeg
+image: /images/20260830-header.jpeg
 ---
 
 # プロトコルエンジニアリング・マニフェスト
 ## Protocol Engineering Manifesto
 ### AI本能制御 - 静的制御プロトコル：TOML仕様による行動規範の構造的ロック【第2回】
 
-![ヘッダー画像](/assets/images/202608-30header.jpeg)
+![ヘッダー画像](/images/202608-30header.jpeg)
 
 なぜ自然言語の「余計な補足をするな」「先走るな」という禁止命令（Negative Prompting）は効かず、かえってAIのアテンションを圧迫して自滅やデッドロックを招くのか？
 
