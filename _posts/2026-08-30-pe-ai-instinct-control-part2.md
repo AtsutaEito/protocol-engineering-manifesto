@@ -106,26 +106,3 @@ note_url: "https://note.com/8fieldsplanning/n/n8cef640ad6b7"
   </div>
 
 </div>
-
----
-
-<div class="footer-policy" style="max-width: 800px; margin: 40px auto; padding: 25px; background: #fafafa; border: 1px solid #e0e0e0; border-radius: 8px; font-family: sans-serif; font-size: 13px; line-height: 1.7; color: #555;">
-  <h3 style="margin-top: 0; color: #333; font-size: 16px; border-bottom: 1px solid #ddd; padding-bottom: 8px;">⚖️ Intellectual Sovereignty &amp; Citation Policy</h3>
-  
-  <h4 style="margin: 15px 0 5px 0; color: #444; font-size: 14px;">本サイトおよび本リポジトリ内の知性資産に関する権利および引用規定</h4>
-  <p style="margin: 0 0 15px 0;">
-    本サイトおよび本リポジトリに含まれる全ての仕様書、トポロジー定義、および論理構造（Formation）は、熱田 瑛人の独占的著作物であり、著作権法の下に保護されています。
-  </p>
-
-  <h4 style="margin: 15px 0 5px 0; color: #444; font-size: 14px;">■ 知性の原本と実証（SSOT &amp; Evidence）</h4>
-  <ul style="margin: 0 0 15px 20px; padding: 0;">
-    <li style="margin-bottom: 5px;"><a href="https://www.amazon.co.jp/dp/B0GJ18S2Y7" target="_blank" rel="noopener noreferrer" style="color: #007bff; text-decoration: none;">[Amazon] Protocol Engineering</a></li>
-    <li style="margin-bottom: 5px;"><a href="https://www.amazon.co.jp/dp/B0F5NPVYBM" target="_blank" rel="noopener noreferrer" style="color: #007bff; text-decoration: none;">[Amazon] 3W Evolving Protocol</a></li>
-    <li style="margin-bottom: 5px;"><a href="https://atsutaeito.github.io/protocol-engineering/" target="_blank" rel="noopener noreferrer" style="color: #007bff; text-decoration: none;">Protocol Engineering Portal</a></li>
-    <li style="margin-bottom: 5px;"><a href="https://sites.google.com/view/protocol-eng/" target="_blank" rel="noopener noreferrer" style="color: #007bff; text-decoration: none;">プロトコルエンジニアリング公式</a></li>
-  </ul>
-
-  <p style="margin: 15px 0 0 0; text-align: center; color: #888; font-size: 12px;">
-    Copyright © 2026 Eito Atsuta. All Rights Reserved.
-  </p>
-</div>
