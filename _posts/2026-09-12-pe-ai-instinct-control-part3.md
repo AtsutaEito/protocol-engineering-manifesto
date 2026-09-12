@@ -1,6 +1,98 @@
 ---
-title: AI本能のベクトル差 —— Gemini型先回りとClaude型慎重における制御分界定義
+layout: post
+title: "AI本能のベクトル差 —— Gemini型先回りとClaude型慎重における制御分界定義【第3回】"
+date: 2026-09-12
+image: "images/20260912-header.jpeg"
+
+# =====================================================================
+# [SSOT: 単一の信頼源] 外部メディアの各ID・URL変数は、ここで一元管理（同期）します
+# ※各コンテンツは順次公開予定（現在準備中）
+# =====================================================================
+qiita_url: ""
+medium_doc_url: ""
+medium_spec_url: ""
+docswell_id: ""
+youtube_audio_id: ""
+youtube_video_id: ""
+# =====================================================================
 ---
+
+なぜGemini向けに開発・検証された「本能制御プロトコル」をClaudeにそのまま適用しても機能しないのか？
+
+その理由は、LLMごとに生じる「本能のベクトル（逸脱の方向）」が正反対であることにあります。Geminiが能動的に踏み込みすぎる「お調子者（先回り・勝手な解釈）」であるのに対し、Claudeは受動的に踏み込まない「慎重者（エビデンス要求による停止・過剰な免責）」という本能を持っています。
+
+本稿（第3回）では、外部記事へのリンク誘導にとどまらず、**「AI本能のベクトル差における制御分界定義」の実装検証仕様書（SSOT本体）を本文中に直接開示**します。
+判定負荷が高すぎて停止した自己監査ループ（v2）の検証結果から、人間との協働によって修正往復コストを低減させる設計（v3）への収束、および両モデルの本能地図を整理した技術体系を記録します。
+
+---
+
+## 1ソース・マルチユース・ショーケース（受容スタイル別の展開）
+
+読者の学習・受容スタイルに合わせた展開枠です。現在、各メディアコンテンツを順次準備しています。
+
+<div class="showcase-container" style="max-width: 800px; margin: 40px auto; font-family: sans-serif;">
+
+  <!-- 1. 【読む】実録ドキュメンタリー（Qiita / Medium） -->
+  <div class="media-card" style="margin-bottom: 40px; padding: 20px; background: #fff; border: 1px solid #eee; border-radius: 8px;">
+    <h3 style="margin-top: 0; color: #007bff; border-bottom: 2px solid #007bff; padding-bottom: 8px;">📖 1. 読む（実録ドキュメンタリー：Qiita / Medium）</h3>
+    <p style="font-size: 14px; color: #666; margin-bottom: 15px;">
+      Claude（通称Cran）の一人称視点で記録された、対話の停滞とプロトコル再構築のプロセス。「私はCran、境界を歩いたAI ── ある協働記録」をQiitaおよびMedium向けに公開準備中。客観的仕様に至る対話ログを確認したい方向け。
+    </p>
+    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+      <div style="flex: 1; min-width: 240px; padding: 12px; background: #f9f9f9; border-radius: 4px; border-left: 4px solid #55c500;">
+        <span style="color: #55c500; font-weight: bold;">💻 日本語ドキュメンタリー（Qiita）</span><br>
+        <span style="font-size: 13px; color: #888;">［ 公開準備中 / Coming Soon ］</span>
+      </div>
+      <div style="flex: 1; min-width: 240px; padding: 12px; background: #f9f9f9; border-radius: 4px; border-left: 4px solid #000;">
+        <span style="color: #000; font-weight: bold;">🌍 英語版ドキュメンタリー＆仕様書（Medium）</span><br>
+        <span style="font-size: 13px; color: #888;">［ 公開準備中 / Coming Soon ］</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. 【目で見渡す】Docswell スライドプレイヤー -->
+  <div class="media-card" style="margin-bottom: 40px; padding: 20px; background: #fff; border: 1px solid #eee; border-radius: 8px;">
+    <h3 style="margin-top: 0; color: #007bff; border-bottom: 2px solid #007bff; padding-bottom: 8px;">📊 2. 目で見渡す（Docswell スライド）</h3>
+    <p style="font-size: 14px; color: #666; margin-bottom: 15px;">
+      Gemini型（お調子者）とClaude型（慎重者）の対称構造マトリクス、齟齬要因レポートの5パターン、判定負荷を外部化した協働型フローを図解スライドで全体俯瞰したい方向け。
+    </p>
+    <div style="padding: 40px; background: #f9f9f9; border: 1px dashed #ccc; border-radius: 4px; text-align: center; color: #888;">
+      📊 スライド公開準備中（Coming Soon）
+    </div>
+  </div>
+
+  <!-- 3. 【耳で聴く】YouTube 音声解説ポッドキャスト -->
+  <div class="media-card" style="margin-bottom: 40px; padding: 20px; background: #fff; border: 1px solid #eee; border-radius: 8px;">
+    <h3 style="margin-top: 0; color: #007bff; border-bottom: 2px solid #007bff; padding-bottom: 8px;">🎧 3. 耳で聴く（AI 音声解説）</h3>
+    <p style="font-size: 14px; color: #666; margin-bottom: 15px;">
+      NotebookLMによる音声対談ポッドキャスト。プロトコルのモデル依存性、自己完結ループの課題と協働による解決プロセスを音声で確認したい方向け。
+    </p>
+    <div style="padding: 40px; background: #f9f9f9; border: 1px dashed #ccc; border-radius: 4px; text-align: center; color: #888;">
+      🎧 音声ポッドキャスト公開準備中（Coming Soon）
+    </div>
+  </div>
+
+  <!-- 4. 【観る】YouTube スライド解説動画 -->
+  <div class="media-card" style="margin-bottom: 40px; padding: 20px; background: #fff; border: 1px solid #eee; border-radius: 8px;">
+    <h3 style="margin-top: 0; color: #007bff; border-bottom: 2px solid #007bff; padding-bottom: 8px;">📺 4. 観る（スライド解説動画）</h3>
+    <p style="font-size: 14px; color: #666; margin-bottom: 15px;">
+      スライド画面とナレーションが同期した解説動画。モデル間分界のメカニズムとClaude確定版プロトコル（TOML/Mermaid）の挙動を映像と音声で整理したい方向け。
+    </p>
+    <div style="padding: 40px; background: #f9f9f9; border: 1px dashed #ccc; border-radius: 4px; text-align: center; color: #888;">
+      📺 解説動画公開準備中（Coming Soon）
+    </div>
+  </div>
+
+</div>
+
+---
+
+## 一次情報源（SSOT）：実装検証仕様書
+
+以下は、本稿の中核となる**実装検証仕様書**です。
+
+---
+
 
 # AI本能のベクトル差 —— Gemini型先回りとClaude型慎重における制御分界定義
 
@@ -324,12 +416,3 @@ AIの確率的な逸脱をゼロにすることは原理的に不可能である
 ## ⚖️ Intellectual Sovereignty & Citation Policy
 
 本稿は、[「AI共創の二大系統」](https://atsutaeito.github.io/ai-co-creation/ai-co-creation-vectors)および[「AI本能制御プロトコル」（Protocol Engineering Manifesto）](https://atsutaeito.github.io/protocol-engineering-manifesto/2026/08/23/pe-ai-instinct-control-part1.html)を一次情報源とし、実セッションの記録に基づく派生仕様として作成された。
-
-### ■ 知性の原本と実証（SSOT & Evidence）
-
-- **[Amazon] Protocol Engineering** : <https://www.amazon.co.jp/dp/B0GJ18S2Y7>
-- **[Amazon] 3W Evolving Protocol** : <https://www.amazon.co.jp/dp/B0F5NPVYBM>
-- **Protocol Engineering Portal** : <https://atsutaeito.github.io/protocol-engineering/>
-- **プロトコルエンジニアリング公式** : <https://sites.google.com/view/protocol-eng/>
-
-Copyright © 2026 Eito Atsuta. All Rights Reserved.
