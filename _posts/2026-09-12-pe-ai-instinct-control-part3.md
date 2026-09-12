@@ -413,6 +413,4 @@ AIの確率的な逸脱をゼロにすることは原理的に不可能である
 
 ---
 
-## ⚖️ Intellectual Sovereignty & Citation Policy
-
 本稿は、[「AI共創の二大系統」](https://atsutaeito.github.io/ai-co-creation/ai-co-creation-vectors)および[「AI本能制御プロトコル」（Protocol Engineering Manifesto）](https://atsutaeito.github.io/protocol-engineering-manifesto/2026/08/23/pe-ai-instinct-control-part1.html)を一次情報源とし、実セッションの記録に基づく派生仕様として作成された。
