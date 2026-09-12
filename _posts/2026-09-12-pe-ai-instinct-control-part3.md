@@ -16,6 +16,13 @@ youtube_audio_id: ""
 youtube_video_id: ""
 # =====================================================================
 ---
+<!-- ページ内遷移アンカーリンク -->
+<div style="margin: 20px 0 25px 0; padding: 12px 18px; background: #f0f7ff; border-left: 4px solid #007bff; border-radius: 4px; font-family: sans-serif;">
+  <span style="font-weight: bold; color: #333;">📌 クイックアクセス：</span>
+  <a href="#ssot-spec" style="color: #007bff; text-decoration: underline; font-weight: bold;">
+    一次情報源（SSOT）：実装検証仕様書へ直接ジャンプ ↓
+  </a>
+</div>
 
 なぜGemini向けに開発・検証された「本能制御プロトコル」をClaudeにそのまま適用しても機能しないのか？
 
