@@ -13,7 +13,7 @@ spec_en_url: "https://atsutaeito.github.io/protocol-engineering-manifesto/2026/0
 note_url: "https://note.com/8fieldsplanning/n/naf6f9108e753"
 docswell_id: "5VJY6P"
 youtube_audio_id: "EnupdV14sVE"
-youtube_video_id: "2yck8xbMFj8E"
+youtube_video_id: "2yck8xbMFj8"
 # =====================================================================
 ---
 <!-- ページ内遷移アンカーリンク -->
