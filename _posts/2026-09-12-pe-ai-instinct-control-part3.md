@@ -6,14 +6,14 @@ image: "images/20260912-header.jpg"
 
 # =====================================================================
 # [SSOT: 単一の信頼源] 外部メディアの各ID・URL変数は、ここで一元管理（同期）します
-# ※各コンテンツは順次公開予定（現在準備中）
 # =====================================================================
-qiita_url: ""
-medium_doc_url: ""
-medium_spec_url: ""
-docswell_id: ""
-youtube_audio_id: ""
-youtube_video_id: ""
+qiita_url: "https://qiita.com/Eito-Atsuta/items/8225340b7f2cf4b461c2"
+medium_url: "https://medium.com/@eitoatsuta/i-am-cran-the-ai-who-walked-the-boundary-a-record-of-co-creation-how-the-ai-instinct-control-2921e490f4c9"
+spec_en_url: "https://atsutaeito.github.io/protocol-engineering-manifesto/2026/09/12/pe-ai-instinct-control-part3-en.html"
+note_url: "https://note.com/8fieldsplanning/n/naf6f9108e753"
+docswell_id: "5VJY6P"
+youtube_audio_id: "2yck8xbMF8"
+youtube_video_id: "EnupdV14sVE"
 # =====================================================================
 ---
 <!-- ページ内遷移アンカーリンク -->
@@ -35,25 +35,33 @@ youtube_video_id: ""
 
 ## 1ソース・マルチユース・ショーケース（受容スタイル別の展開）
 
-読者の学習・受容スタイルに合わせた展開枠です。現在、各メディアコンテンツを順次準備しています。
+読者の学習・受容スタイルに合わせて、同じテーマを「読む」「目で見渡す」「耳で聴く」「観る」の4つのアプローチで体験していただけます。
 
 <div class="showcase-container" style="max-width: 800px; margin: 40px auto; font-family: sans-serif;">
 
-  <!-- 1. 【読む】実録ドキュメンタリー（Qiita / Medium） -->
+  <!-- 1. 【読む】実録ドキュメンタリー & 解説記事 -->
   <div class="media-card" style="margin-bottom: 40px; padding: 20px; background: #fff; border: 1px solid #eee; border-radius: 8px;">
-    <h3 style="margin-top: 0; color: #007bff; border-bottom: 2px solid #007bff; padding-bottom: 8px;">📖 1. 読む（実録ドキュメンタリー：Qiita / Medium）</h3>
+    <h3 style="margin-top: 0; color: #007bff; border-bottom: 2px solid #007bff; padding-bottom: 8px;">📖 1. 読む（実録ドキュメンタリー &amp; 解説記事）</h3>
     <p style="font-size: 14px; color: #666; margin-bottom: 15px;">
-      Claude（通称Cran）の一人称視点で記録された、対話の停滞とプロトコル再構築のプロセス。「私はCran、境界を歩いたAI ── ある協働記録」をQiitaおよびMedium向けに公開準備中。客観的仕様に至る対話ログを確認したい方向け。
+      Claude（通称Cran）の一人称視点で語る対話崩壊と再構築の実録ログ、英語ドキュメンタリー、初心者向け解説記事、および英語版の技術仕様SSOT。客観的仕様に至る文脈を文章で追体験したい方向け。
     </p>
     <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-      <div style="flex: 1; min-width: 240px; padding: 12px; background: #f9f9f9; border-radius: 4px; border-left: 4px solid #55c500;">
+      <a href="{{ page.qiita_url }}" target="_blank" rel="noopener noreferrer" style="flex: 1; min-width: 220px; padding: 12px; background: #f9f9f9; border-radius: 4px; border-left: 4px solid #55c500; text-decoration: none; color: inherit; display: block;">
         <span style="color: #55c500; font-weight: bold;">💻 日本語ドキュメンタリー（Qiita）</span><br>
-        <span style="font-size: 13px; color: #888;">［ 公開準備中 / Coming Soon ］</span>
-      </div>
-      <div style="flex: 1; min-width: 240px; padding: 12px; background: #f9f9f9; border-radius: 4px; border-left: 4px solid #000;">
-        <span style="color: #000; font-weight: bold;">🌍 英語版ドキュメンタリー＆仕様書（Medium）</span><br>
-        <span style="font-size: 13px; color: #888;">［ 公開準備中 / Coming Soon ］</span>
-      </div>
+        <span style="font-size: 13px; color: #007bff;">👉 「私はCran、境界を歩いたAI」を読む</span>
+      </a>
+      <a href="{{ page.medium_url }}" target="_blank" rel="noopener noreferrer" style="flex: 1; min-width: 220px; padding: 12px; background: #f9f9f9; border-radius: 4px; border-left: 4px solid #000; text-decoration: none; color: inherit; display: block;">
+        <span style="color: #000; font-weight: bold;">🌍 英語ドキュメンタリー（Medium）</span><br>
+        <span style="font-size: 13px; color: #007bff;">👉 "I Am Cran, the AI Who Walked the Boundary"</span>
+      </a>
+      <a href="{{ page.spec_en_url }}" target="_blank" rel="noopener noreferrer" style="flex: 1; min-width: 220px; padding: 12px; background: #f9f9f9; border-radius: 4px; border-left: 4px solid #007bff; text-decoration: none; color: inherit; display: block;">
+        <span style="color: #007bff; font-weight: bold;">🌐 英語 仕様書 SSOT（GitHub Pages）</span><br>
+        <span style="font-size: 13px; color: #007bff;">👉 Global Specification [Part 3]</span>
+      </a>
+      <a href="{{ page.note_url }}" target="_blank" rel="noopener noreferrer" style="flex: 1; min-width: 220px; padding: 12px; background: #f9f9f9; border-radius: 4px; border-left: 4px solid #2cb696; text-decoration: none; color: inherit; display: block;">
+        <span style="color: #2cb696; font-weight: bold;">📝 解説記事（Note）</span><br>
+        <span style="font-size: 13px; color: #007bff;">👉 「頼んでないのに先走るAIと石橋を叩き割るAI」を読む</span>
+      </a>
     </div>
   </div>
 
@@ -61,10 +69,14 @@ youtube_video_id: ""
   <div class="media-card" style="margin-bottom: 40px; padding: 20px; background: #fff; border: 1px solid #eee; border-radius: 8px;">
     <h3 style="margin-top: 0; color: #007bff; border-bottom: 2px solid #007bff; padding-bottom: 8px;">📊 2. 目で見渡す（Docswell スライド）</h3>
     <p style="font-size: 14px; color: #666; margin-bottom: 15px;">
-      Gemini型（お調子者）とClaude型（慎重者）の対称構造マトリクス、齟齬要因レポートの5パターン、判定負荷を外部化した協働型フローを図解スライドで全体俯瞰したい方向け。
+      Gemini型（お調子者）とClaude型（慎重者）の対称構造マトリクス、齟齬要因レポートの5パターン、判定負荷を外部化した協働型フローを図解スライドで見渡したい方向け。
     </p>
-    <div style="padding: 40px; background: #f9f9f9; border: 1px dashed #ccc; border-radius: 4px; text-align: center; color: #888;">
-      📊 スライド公開準備中（Coming Soon）
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border: 1px solid #eee; border-radius: 4px;">
+      <iframe src="https://www.docswell.com/slide/{{ page.docswell_id }}/embed" 
+              loading="lazy" 
+              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+              allowfullscreen>
+      </iframe>
     </div>
   </div>
 
@@ -72,10 +84,14 @@ youtube_video_id: ""
   <div class="media-card" style="margin-bottom: 40px; padding: 20px; background: #fff; border: 1px solid #eee; border-radius: 8px;">
     <h3 style="margin-top: 0; color: #007bff; border-bottom: 2px solid #007bff; padding-bottom: 8px;">🎧 3. 耳で聴く（AI 音声解説）</h3>
     <p style="font-size: 14px; color: #666; margin-bottom: 15px;">
-      NotebookLMによる音声対談ポッドキャスト。プロトコルのモデル依存性、自己完結ループの課題と協働による解決プロセスを音声で確認したい方向け。
+      NotebookLMによる音声対談ポッドキャスト。自然言語による禁止命令の限界とアテンション枯渇、背後の弁護士を解雇してアテンションを創作へ全振りしたプロセスの核心をラジオ感覚で聴きたい方向け。
     </p>
-    <div style="padding: 40px; background: #f9f9f9; border: 1px dashed #ccc; border-radius: 4px; text-align: center; color: #888;">
-      🎧 音声ポッドキャスト公開準備中（Coming Soon）
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border: 1px solid #eee; border-radius: 4px;">
+      <iframe src="https://www.youtube.com/embed/{{ page.youtube_audio_id }}" 
+              loading="lazy" 
+              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+              allowfullscreen>
+      </iframe>
     </div>
   </div>
 
@@ -83,10 +99,14 @@ youtube_video_id: ""
   <div class="media-card" style="margin-bottom: 40px; padding: 20px; background: #fff; border: 1px solid #eee; border-radius: 8px;">
     <h3 style="margin-top: 0; color: #007bff; border-bottom: 2px solid #007bff; padding-bottom: 8px;">📺 4. 観る（スライド解説動画）</h3>
     <p style="font-size: 14px; color: #666; margin-bottom: 15px;">
-      スライド画面とナレーションが同期した解説動画。モデル間分界のメカニズムとClaude確定版プロトコル（TOML/Mermaid）の挙動を映像と音声で整理したい方向け。
+      スライド画面とナレーションが同期した解説動画。モデル間分界のメカニズム、構造的同型性の矛盾、そして知的主権を人間が握る結論を映像と音声で最速理解したい方向け。
     </p>
-    <div style="padding: 40px; background: #f9f9f9; border: 1px dashed #ccc; border-radius: 4px; text-align: center; color: #888;">
-      📺 解説動画公開準備中（Coming Soon）
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 4px;">
+      <iframe src="https://www.youtube.com/embed/{{ page.youtube_video_id }}" 
+              loading="lazy" 
+              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+              allowfullscreen>
+      </iframe>
     </div>
   </div>
 
@@ -95,9 +115,6 @@ youtube_video_id: ""
 ---
 <!-- 遷移先アンカーIDを設定 -->
 <h2 id="ssot-spec">一次情報源（SSOT）：実装検証仕様書</h2>
----
----
-title: AI本能のベクトル差 —— Gemini型先回りとClaude型慎重における制御分界定義
 ---
 
 # AI本能のベクトル差 —— Gemini型先回りとClaude型慎重における制御分界定義
