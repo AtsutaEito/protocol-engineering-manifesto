@@ -12,8 +12,8 @@ medium_url: "https://medium.com/@eitoatsuta/i-am-cran-the-ai-who-walked-the-boun
 spec_en_url: "https://atsutaeito.github.io/protocol-engineering-manifesto/2026/09/12/pe-ai-instinct-control-part3-en.html"
 note_url: "https://note.com/8fieldsplanning/n/naf6f9108e753"
 docswell_id: "5VJY6P"
-youtube_audio_id: "2yck8xbMF8"
-youtube_video_id: "EnupdV14sVE"
+youtube_audio_id: "EnupdV14sVE"
+youtube_video_id: "2yck8xbMFj8E"
 # =====================================================================
 ---
 <!-- ページ内遷移アンカーリンク -->
