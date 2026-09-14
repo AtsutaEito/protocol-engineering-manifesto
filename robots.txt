@@ -1,0 +1,7 @@
+# ==============================================================================
+# Protocol Engineering Manifesto - Canonical robots.txt
+# OPTIMIZATION: Fully Open for Standard Search and AI Agents
+# ==============================================================================
+
+User-agent: *
+Allow: /
