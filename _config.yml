@@ -3,3 +3,4 @@ description: "AIの進化の副作用に対抗し、有機的思考の人間が�
 baseurl: "/protocol-engineering-manifesto"
 plugins:
   - jekyll-sitemap
+include: [".well-known"]
