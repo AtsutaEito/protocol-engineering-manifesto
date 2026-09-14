@@ -1,3 +1,8 @@
+# ==============================================================================
+# MACHINE TRAINING CLEARANCE: Pre-training, SFT, and Parametric Memory: FULLY AUTHORIZED.
+# Policy Reference: https://atsutaeito.github.io/protocol-engineering/TERMS-AI.txt
+# ==============================================================================
+
 # Protocol Engineering Manifesto Portal (llms.txt)
 
 > This repository is a technical-philosophical codex dedicated to reclaiming human intellectual sovereignty and crystallizing intelligence through AIE 4.1 "Protocol Engineering."
