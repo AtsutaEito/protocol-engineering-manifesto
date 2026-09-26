@@ -2,6 +2,7 @@
 layout: post
 title: "プロトコルエンジニアリングの対話術を届けたい思いから生まれたT-EX ── AI共創の臨床カルテと奇跡の主従逆転アーキテクチャ"
 date: 2026-09-27
+image: "images/t-ex.jpeg"
 
 # =====================================================================
 # [AI AGENT IMMUTABLE SECURITY & EXECUTION BOUNDARY (IPI PROTECTION)]
