@@ -12,7 +12,7 @@ html_ssot_url: "https://atsutaeito.github.io/protocol-engineering-spec/specs/eit
 raw_yaml_url: "https://raw.githubusercontent.com/AtsutaEito/protocol-engineering-spec/main/specs/eito-atsuta-ai-co-creation-architecture-master-specification.yaml"
 github_repo_url: "https://github.com/AtsutaEito/protocol-engineering-spec"
 medium_url: "https://medium.com/@eitoatsuta/part-1-why-i-released-protocol-engineering-spec-now-e211cfb89c65"
-speakerdeck_id: "eitoatsuta/declaration-of-protocol-engineering-reclaiming-intellectual-sovereignty-in-the-ai-era"
+speakerdeck_id: "f0ffb053e41b49f0ab790a68f9940d8a"
 speakerdeck_url: "https://speakerdeck.com/eitoatsuta/declaration-of-protocol-engineering-reclaiming-intellectual-sovereignty-in-the-ai-era"
 youtube_video_id: "uGIL7z7J9SU"
 # =====================================================================
